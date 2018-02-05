@@ -33,4 +33,24 @@ public class MainActivity extends AppCompatActivity {
         mv.getController().setZoom(16);
         mv.getController().setCenter(new GeoPoint(51.40,-1.32));
     }
+
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
+        MenuInflater inflater=getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+        if(item.getItemId() == R.id.choosemap)
+        {
+
+            Intent intent = new Intent(this,MapChooseActivity.class);
+            startActivity(intent);
+            // react to the menu item being selected...
+            return true;
+        }
+        return false;
+    }
 }
