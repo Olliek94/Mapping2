@@ -19,7 +19,7 @@ public class MapChooseActivity extends AppCompatActivity implements View.OnClick
         setContentView(R.layout.activity_map_choose);
 
         Button regularBtn = (Button) findViewById(R.id.btnRegular);
-        hikeBikeBtn = (Button) findViewById(R.id.btnHikeBikeMap);
+        Button hikeBikeBtn = (Button) findViewById(R.id.btnHikeBikeMap);
 
         regularBtn.setOnClickListener(this);
         hikeBikeBtn.setOnClickListener(this);
@@ -35,6 +35,6 @@ public class MapChooseActivity extends AppCompatActivity implements View.OnClick
         }
         Intent intent = new Intent();
         Bundle returnedData = new Bundle();
-        returnedData.putBoolean("com.example.2keevo61.mapping2. hikebike" hikeBike);
+        returnedData.putBoolean("com.example.2keevo61.mapping2. hikebike", hikeBike);
     }
 }
