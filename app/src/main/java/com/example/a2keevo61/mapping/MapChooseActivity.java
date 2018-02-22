@@ -26,15 +26,20 @@ public class MapChooseActivity extends AppCompatActivity implements View.OnClick
 
     }
 
-    public void onClick(View view)
+    public void onClick(View v)
     {
-        boolean hikeBike = false;
-        if(view.getId() == R.id.btnHikeBikeMap)
-        {
-            hikeBike = true;
-        }
         Intent intent = new Intent();
-        Bundle returnedData = new Bundle();
-        returnedData.putBoolean("com.example.2keevo61.mapping2. hikebike", hikeBike);
+        Bundle bundle=new Bundle();
+        boolean hikebikemap=false;
+        if (v.getId()==R.id.btnHikeBikeMap)
+        {
+            hikebikemap=true;
+        }
+        bundle.putBoolean("com.example.2keevo61.mapping2.hikebike", hikebikemap);
+        intent.putExtras(bundle);
+        setResult(RESULT_OK,intent);
+        finish();
     }
 }
+
+
